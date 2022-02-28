@@ -1,0 +1,30 @@
+<section class="vh-100">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-md-8 col-lg-6 col-xl-4">
+                <h3 class="mb-4 pb-2 fw-normal">Check the weather forecast</h3>
+                <div class="input-group rounded mb-3">
+                    <input type="search" class="form-control rounded" placeholder="City" aria-label="Search"
+                        aria-describedby="search-addon" #inputName />
+                    <button type="button" class="btn btn-warning" (click)="getValue(inputName.value)">GO</button>
+                </div>
+                <div class="card text-warning "
+                    style="background-image:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('../../assets/images/{{main}}.gif'); background-repeat: no-repeat; background-size: cover;">
+                    <div class="card-body p-4">
+                        <h4 class="mb-1 sfw-normal">{{cityName}}</h4>
+                        <p class="mb-2">Current temperature: <strong>{{currentTemperature}}℃</strong></p>
+                        <p>Feels like: <strong>{{feelLike}}℃</strong></p>
+                        <p>Max: <strong>{{max}}℃</strong>, Min: <strong>{{min}}℃</strong></p>
+                        <div class="d-flex flex-row align-items-center">
+                            <p class="mb-0 me-4">{{main}}</p>
+                            <i class="fas fa-cloud fa-3x" style="color: #eee;"></i>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
